@@ -4,7 +4,7 @@ public class StrReverse{
 	public static void main(String[] args){
 		
 		String inputStr = "I am learning Java";
-        String reversed = "";
+       	        String reversed = "";
 		
 		System.out.println("Input String: "+inputStr);
 		for(int i = inputStr.length()-1 ; i>=0; i--){
@@ -14,10 +14,10 @@ public class StrReverse{
 		
 		//Another way for String Reverse 
 		System.out.println("Another way: ");
-        char[] tochar = inputStr.toCharArray();
+       	        char[] tochar = inputStr.toCharArray();
 		System.out.println("Input String : "+inputStr);
 		System.out.print("Reverse String : ");
-        for(int i = inputStr.length()-1;i>=0;i--){
+          for(int i = inputStr.length()-1;i>=0;i--){
             System.out.print(tochar[i]);
 		}
 		
