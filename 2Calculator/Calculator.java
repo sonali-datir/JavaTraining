@@ -29,7 +29,6 @@ public class Calculator {
 
                 case '-':
                     result=numbersArray[0];
-                    //System.out.println(result);
                     for(int i=0; i<count-1;i++){
                         result=result-numbersArray[i+1];
                     }
@@ -52,7 +51,7 @@ public class Calculator {
                     break;
             }
 
-           // System.out.printf("%.1f %c %.1f = %.1f", first, operator, second, result);
+          
             System.out.println("\nDo you want to continue with same numbers?(y/n)");
             ans = reader.next().charAt(0);
         }while (ans=='y');
