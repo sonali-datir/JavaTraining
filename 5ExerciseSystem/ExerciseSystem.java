@@ -5,9 +5,14 @@ public class ExerciseSystem extends GetInformation{
     public static void main(String[] args)
     {
         char choice;
-
+        char modeChoice;
+        
         Scanner sc = new Scanner(System.in);
+        
         System.out.println("****EXERCISE SYSTEM****");
+        System.out.println("a) Aggregate Mode \nb) Detail Mode");
+        modeChoice = sc.next().charAt(0);
+
         getUserInfo();
 
         do {
@@ -18,8 +23,14 @@ public class ExerciseSystem extends GetInformation{
             choice = sc.next().charAt(0);
         }while((choice == 'y') || (choice == 'Y') );
 
-        printAllInfo();
-        //GetInformation.printDetailInfo();
+        if(modeChoice == 'b'){
+            System.out.println("Detail Mode");
+            printDetailInfo();
+
+        }else{
+            System.out.println("Aggregate Mode");
+            printAllInfo();
+        }
 
     }
 
