@@ -2,32 +2,23 @@ create database student_db2;
 
 use student_db2;
 
--- user table
-create table users(id int PRIMARY KEY AUTO_INCREMENT, user_name varchar(45) NOT NULL);
-
 -- student table
-drop table student_info;
+
 create table student_info(id int PRIMARY KEY AUTO_INCREMENT, first_name varchar(45) NOT NULL, last_name varchar(45) NOT NULL, 
-created_by int NOT NULL, updated_by int, created_on datetime default now(), updated_on datetime, FOREIGN KEY(created_by) REFERENCES users(id) , FOREIGN KEY(updated_by ) REFERENCES users(id));
+created_by int NOT NULL, updated_by int, created_on datetime default now(), updated_on datetime);
 desc student_info;
 
 -- courses table
 create table course_info(id int PRIMARY KEY AUTO_INCREMENT, course_name varchar(45) UNIQUE  NOT NULL,
-created_by int NOT NULL, updated_by int, created_on datetime default now(), updated_on datetime, 
-FOREIGN KEY(created_by) REFERENCES users(id) , FOREIGN KEY(updated_by ) REFERENCES users(id));
+created_by int NOT NULL, updated_by int, created_on datetime default now(), updated_on datetime);
 
 -- score table 
-create table score_info(score_id int PRIMARY KEY AUTO_INCREMENT, student_id int NOT NULL, course_id int NOT NULL, 
+create table score_info(id int PRIMARY KEY AUTO_INCREMENT, student_id int NOT NULL, course_id int NOT NULL, 
 score int NOT NULL, start_date_time datetime NOT NULL, end_date_time datetime NOT NULL,
 created_by int NOT NULL, updated_by int, created_on datetime default now(), updated_on datetime, 
-FOREIGN KEY(student_id) REFERENCES student_info(id), FOREIGN KEY (course_id) REFERENCES course_info(id),
-FOREIGN KEY(created_by) REFERENCES users(id) , FOREIGN KEY(updated_by ) REFERENCES users(id));
+FOREIGN KEY(student_id) REFERENCES student_info(id), FOREIGN KEY (course_id) REFERENCES course_info(id));
 
-drop table score_info;
 desc score_info;
-
--- insert in users table
-insert into users(user_name) values ("Database Administrators" ),("Application Programmers");
 
 -- insert in student table
 insert into student_info(first_name, last_name, created_by) values ("Monica","Geller",1), ("Chandler","Bing",2), ("Phoebe","Buffay",1), 
@@ -50,8 +41,6 @@ insert into score_info(student_id, course_id, score, start_date_time, end_date_t
 (5,1, 84, '2020-06-05 14:29:36', '2020-07-05 12:29:36',1);
 
 -- all tables info
-use student_db2;
-select *from users;
 select * from student_info; 
 select *from course_info;
 select *from score_info order by student_id, course_id, end_date_time;
@@ -84,7 +73,7 @@ JOIN course_info c ON c.id = sc.course_id where  (c.id, sc.end_date_time) in (
     group by course_id
 );
 
--- The best score obtained (by any students) per course along with the name of the student. Kind of the like topper of each course.
+-- The best score obtained (by any students) per course along with the name of the student. Kind of the like topperss of each course.
 select s.id as student_id, s.first_name as topper,c.id as course_id, c.course_name , max(sc.score) as max_course_score from student_info s 
 INNER JOIN score_info sc ON s.id = sc.student_id 
 JOIN course_info c ON c.id =sc.course_id
