@@ -1,0 +1,617 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SpringAssignment03",
+		"_postman_id": "cde60e6d-f038-ba02-64c9-b83c9644572b",
+		"description": "For Spring Boot and JPA assignment 03",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/student",
+			"request": {
+				"url": "localhost:8080/student",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjoxMjM=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Gunther\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/create/student",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/create/student",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Mike\",\n    \"lastName\": \"Hannigan\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/student/2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "user",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/student/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic dXNlcjoxMjM=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Gunther\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/student/getbyname",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "user",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/student/getbyname",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic dXNlcjoxMjM=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Rachel\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/update/student/15",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/update/student/15",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Crap\",\n    \"lastName\": \"Bag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/course",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "user",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/course",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic dXNlcjoxMjM=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Gunther\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/delete/student/14",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/delete/student/14",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"1222Gunther\",\n    \"lastName\": \"vbjdhCentralPerk\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/course/getbyname",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "user",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/course/getbyname",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic dXNlcjoxMjM=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"SQL\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/course/1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/course/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"courseName\": \"Spring Boot and JPA\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/create/course",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/create/course",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"courseName\": \"Spring Boot\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/create/course",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/create/course",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"courseName\": \"SpringBoot\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/update/course/7",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/update/course/7",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"courseName\": \"Spring Boot and JPA\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/delete/course/7",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/delete/course/7",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"courseName\": \"Spring Boot and JPA\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/scores",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "user",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/scores",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic dXNlcjoxMjM=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Gunther\",\n    \"lastName\": \"CentralPerk\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/create/scores",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/create/scores",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"score\": 55,\n        \"startDateTime\": \"2020-05-05T14:29:36\",\n        \"endDateTime\": \"2020-08-05T14:29:36\",\n        \"student_id\": 2,\n        \"course_id\": 3\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/update/scores/21",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/update/scores/21",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n        \"score\": 40,\n        \"startDateTime\": \"2020-05-05T08:59:36\",\n        \"endDateTime\": \"2020-09-05T08:59:36\",\n        \"student_id\": 2,\n        \"course_id\": 3\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/delete/scores/21",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "123",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "localhost:8080/delete/scores/21",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"name": "Authorization",
+						"value": "Basic YWRtaW46MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"courseName\": \"Updated Spring Boot\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
